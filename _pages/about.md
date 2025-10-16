@@ -11,11 +11,9 @@ Hello there!! Welcome to my personal website.
 
 Assuming you’re here to get to know me better, I’ll try to give you a better glimpse into my academic career and who I am as a person — and quick warning, I’m not gonna do it “professionally.”
 
-Imagine we’re chatting at a conference, or a mixer.
+Imagine we’re chatting at a conference, or a mixer. So let’s be different for a change — it might be refreshing…
 
-I really don’t like those personal websites that follow the same rulebook of being professional while being boring to the MAX!!
-
-So let’s be different for a change — it might be refreshing…
+At the moment I am finishing my Ph.D. at NYU, and I'm looking for a good PostDoc position. I believe I need it for my next step in my long-term academic goal which is to become a professor in robotics. Most desirably I wanna research in the learning realm of robotics. The idea of how a broad notion like "learning" can be tamed within our mathematical equations is fascinating to me. So hopefully, this mere attempt of me having a webpage, can show you who I am and what I want for my future to look like. 
 
 <!-- This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
 
