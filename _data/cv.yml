@@ -111,75 +111,70 @@ cv:
     #     awarder: German Physical Society
     #     summary: Awarded for outstanding scientific achievement
 
-    Publications:
-      - title: Toward Global Intent Inference for Human Motion by Inverse Reinforcement Learning
-        authors:
-          - Sarmad Mehrdad, Maxime Sabbah, Vincent Bonnet, Ludovic Righetti
-        publisher: arXiv
-        releaseDate: 2026-03-09
-        url: https://arxiv.org/pdf/2603.07797
-        summary: #'We hypothesize that humans do not adhere to a single cost function when performing a task; rather, they switch their preferences multiple times depending on the task context. Using MO-IRL, we estimate the cost functions governing a human wall-reaching task using an enhanced MO-IRL approach on data collected from 15 human subjects across five initial positions. '
+    # Publications:
+    #   - title: Toward Global Intent Inference for Human Motion by Inverse Reinforcement Learning
+    #     authors:
+    #       - Sarmad Mehrdad, Maxime Sabbah, Vincent Bonnet, Ludovic Righetti
+    #     publisher: arXiv
+    #     releaseDate: 2026-03-09
+    #     url: https://arxiv.org/pdf/2603.07797
+    #     summary: #'We hypothesize that humans do not adhere to a single cost function when performing a task; rather, they switch their preferences multiple times depending on the task context. Using MO-IRL, we estimate the cost functions governing a human wall-reaching task using an enhanced MO-IRL approach on data collected from 15 human subjects across five initial positions. '
 
-      - title: Cost Function Estimation Using Inverse Reinforcement Learning with Minimal Observations
-        authors:
-          - Sarmad Mehrdad, Avadesh Meduri, Ludovic Righetti
-        publisher: IEEE/RSJ International Conference on Intelligent Robots and Systems
-        releaseDate: 2025-10-19
-        url: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11247476
-        summary: #'We took MaxEnt IRL and made it iterative. Similar to optimal control, where a step direction and size are computed and taken at each iteration until convergence, we update the cost function weights in the same fashion. The plot twist is that we compute the step direction for the weights using MaxEnt IRL and determine the step size through a step-acceptance scheme (similar to a filter line search).'
+    #   - title: Cost Function Estimation Using Inverse Reinforcement Learning with Minimal Observations
+    #     authors:
+    #       - Sarmad Mehrdad, Avadesh Meduri, Ludovic Righetti
+    #     publisher: IEEE/RSJ International Conference on Intelligent Robots and Systems
+    #     releaseDate: 2025-10-19
+    #     url: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11247476
+    #     summary: #'We took MaxEnt IRL and made it iterative. Similar to optimal control, where a step direction and size are computed and taken at each iteration until convergence, we update the cost function weights in the same fashion. The plot twist is that we compute the step direction for the weights using MaxEnt IRL and determine the step size through a step-acceptance scheme (similar to a filter line search).'
 
-      - title: Learning Human Reaching Optimality Principles from Minimal Observation Inverse Reinforcement Learning
-        authors:
-          - Sarmad Mehrdad, Maxime Sabbah, Vincent Bonnet, Ludovic Righetti
-        publisher: arXiv
-        releaseDate: 2025-09-30
-        url: https://arxiv.org/pdf/2510.00329
-        summary: #'We used MO-IRL on human-subject data for reaching tasks initiated from various postures to see how the assumed cost features would factor into a human’s motion for reaching — basically, what a human is trying to optimize. Another important avenue we pursued was using multiple weight sections throughout the course of human-generated trajectories instead of constant weights (as in MPC, for example).'
+    #   - title: Learning Human Reaching Optimality Principles from Minimal Observation Inverse Reinforcement Learning
+    #     authors:
+    #       - Sarmad Mehrdad, Maxime Sabbah, Vincent Bonnet, Ludovic Righetti
+    #     publisher: arXiv
+    #     releaseDate: 2025-09-30
+    #     url: https://arxiv.org/pdf/2510.00329
+    #     summary: #'We used MO-IRL on human-subject data for reaching tasks initiated from various postures to see how the assumed cost features would factor into a human’s motion for reaching — basically, what a human is trying to optimize. Another important avenue we pursued was using multiple weight sections throughout the course of human-generated trajectories instead of constant weights (as in MPC, for example).'
 
     
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    # Skills:
+    #   - name: Physics
+    #     level: Master
+    #     icon: fa-solid fa-hashtag
+    #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
-    Languages:
-      - name: English
-        summary: "Fluent"
+    
 
-      - name: Farsi
-        summary: "Native Speaker"
+    # Interests:
+    #   - name: Physics
+    #     icon: fa-solid fa-tag
+    #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    # Certificates:
+    #   - name: Machine Learning
+    #     date: 2018-01-01
+    #     issuer: Stanford University
+    #     icon: fa-solid fa-location-dot
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+    #   - name: Quantum Computing
+    #     date: 2018-01-01
+    #     issuer: Stanford University
+    #     icon: fa-solid fa-tag
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+    #   - name: Quantum Information
+    #     date: 2018-01-01
+    #     issuer: Stanford University
+    #     icon: fa-solid fa-envelope
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+    # Projects:
+    #   - name: Quantum Computing
+    #     summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+    #     highlights:
+    #       - Quantum Teleportation
+    #       - Quantum Cryptography
+    #     start_date: 2018-01-01
+    #     end_date: 2018-01-01
 
     Awards:
       - title: Ernst Weber Fellowship
@@ -202,11 +197,20 @@ cv:
         date: 2020-06-01
         awarder: NYU - Tandon School of Engineering
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    # References:
+    #   - name: Professor John Doe
+    #     icon: fa-solid fa-laptop
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+
+    #   - name: Professor Jane Smith
+    #     icon: fa-solid fa-thumbtack
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+
+    Languages:
+      - name: English
+        summary: "Fluent"
+
+      - name: Farsi
+        summary: "Native Speaker"
