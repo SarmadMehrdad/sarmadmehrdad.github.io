@@ -28,11 +28,12 @@ Hi. I am **Sarmad Mehrdad**.
 
 I recently completed my Ph.D. in Electrical Engineering at **New York University**. My work sits at the intersection of **robot learning, optimal control, and human motion understanding**. I care most about learning methods that are **data-efficient, interpretable, and grounded** in the behavior of real embodied systems.
 
-<div class="about-cta-row">
-  <a class="btn btn-sm z-depth-1" href="{{ '/publications/' | relative_url }}">Publications</a>
-  <a class="btn btn-sm z-depth-1" href="{{ '/research-statement/' | relative_url }}">Research Statement</a>
-  <a class="btn btn-sm z-depth-1" href="{{ '/cv/' | relative_url }}">CV</a>
-  <a class="btn btn-sm z-depth-1" href="{{ '/personal/' | relative_url }}">Personal</a>
+<div class="homepage-socials">
+  <a href="mailto:sm9167@nyu.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  <a href="https://scholar.google.com/citations?hl=en&user=6r4_QewAAAAJ&view_op=list_works&sortby=pubdate" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a>
+  <a href="https://orcid.org/0000-0001-5313-9493" aria-label="ORCID" target="_blank" rel="noopener noreferrer"><i class="ai ai-orcid"></i></a>
+  <a href="https://github.com/SarmadMehrdad" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/sarmad-mehrdad-a7089ba7/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
 </div>
 
 <div class="summary-grid">
