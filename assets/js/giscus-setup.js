@@ -18,7 +18,7 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "SarmadMehrdad/website_v2_test",
+    "data-repo": "SarmadMehrdad/sarmadmehrdad.github.io",
     "data-repo-id": "",
     "data-category": "Comments",
     "data-category-id": "",
