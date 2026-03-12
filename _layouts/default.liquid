@@ -21,27 +21,15 @@
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container mt-5 {% if page.toc and page.toc.sidebar %}toc-page{% endif %}" role="main">
       {% if page.toc and page.toc.sidebar %}
-        {% if page.toc.sidebar == 'right' %}
-          <div class="row">
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-          </div>
-        {% else %}
-          <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
-            <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
-            </div>
-            <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
-          </div>
-        {% endif %}
+        <div class="toc-page__content">
+          {{ content }}
+        </div>
+
+        <aside class="toc-page__sidebar {% if page.toc.sidebar == 'left' %}toc-page__sidebar--left{% else %}toc-page__sidebar--right{% endif %}">
+          <nav id="toc-sidebar"></nav>
+        </aside>
       {% else %}
         {{ content }}
       {% endif %}

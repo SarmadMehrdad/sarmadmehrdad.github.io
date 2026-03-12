@@ -1,70 +1,224 @@
-import { highlightSearchTerm } from "./highlight-search-term.js";
+const normalize = (value) => (value || "").toLowerCase().trim();
 
-document.addEventListener("DOMContentLoaded", function () {
-  // actual bibsearch logic
-  const filterItems = (searchTerm) => {
-    document.querySelectorAll(".bibliography, .unloaded").forEach((element) => element.classList.remove("unloaded"));
+const getEntryCards = () => Array.from(document.querySelectorAll(".bibliography > li .pub-card"));
 
-    // highlight-search-term
-    if (CSS.highlights) {
-      const nonMatchingElements = highlightSearchTerm({ search: searchTerm, selector: ".bibliography > li" });
-      if (nonMatchingElements == null) {
-        return;
+const getListItem = (card) => card.closest("li");
+
+const getCardTags = (card) => {
+  const raw = card.dataset.tags || "";
+  return raw
+    .split("|")
+    .map((tag) => normalize(tag))
+    .filter(Boolean);
+};
+
+const getCardDisplayTags = (card) => {
+  const raw = card.dataset.tagsDisplay || "";
+  return raw
+    .split("|")
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+};
+
+const getSearchText = (card) => {
+  const extra = card.dataset.searchExtra || "";
+  return `${card.innerText} ${extra}`.toLowerCase();
+};
+
+const closePanels = (card) => {
+  const panelWrap = card.querySelector(".pub-card__panels");
+  const toggles = card.querySelectorAll(".pub-toggle");
+  const panels = card.querySelectorAll(".pub-panel");
+
+  toggles.forEach((button) => button.classList.remove("is-active"));
+  panels.forEach((panel) => {
+    panel.hidden = true;
+  });
+
+  if (panelWrap) {
+    panelWrap.hidden = true;
+  }
+};
+
+const openPanel = (card, panelName) => {
+  const panelWrap = card.querySelector(".pub-card__panels");
+  const target = card.querySelector(`.pub-panel[data-panel="${panelName}"]`);
+  const toggles = card.querySelectorAll(".pub-toggle");
+  const panels = card.querySelectorAll(".pub-panel");
+
+  if (!panelWrap || !target) return;
+
+  panelWrap.hidden = false;
+  panels.forEach((panel) => {
+    panel.hidden = panel !== target;
+  });
+
+  toggles.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.panel === panelName);
+  });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("bibsearch");
+  const filtersContainer = document.getElementById("pub-tag-filters");
+  const clearButton = document.getElementById("pub-clear-filters");
+  const noResults = document.getElementById("pub-no-results");
+
+  if (!searchInput || !filtersContainer) {
+    return;
+  }
+
+  const cards = getEntryCards();
+  const selectedTags = new Set();
+  const topFilterButtons = new Map();
+
+  const allTagsMap = new Map();
+
+  cards.forEach((card) => {
+    const normalizedTags = getCardTags(card);
+    const displayTags = getCardDisplayTags(card);
+
+    normalizedTags.forEach((tag, index) => {
+      if (!allTagsMap.has(tag)) {
+        allTagsMap.set(tag, displayTags[index] || tag);
       }
-      nonMatchingElements.forEach((element) => {
-        element.classList.add("unloaded");
-      });
-    } else {
-      // Simply add unloaded class to all non-matching items if Browser does not support CSS highlights
-      document.querySelectorAll(".bibliography > li").forEach((element, index) => {
-        const text = element.innerText.toLowerCase();
-        if (text.indexOf(searchTerm) == -1) {
-          element.classList.add("unloaded");
-        }
-      });
-    }
+    });
+  });
 
-    document.querySelectorAll("h2.bibliography").forEach(function (element) {
-      let iterator = element.nextElementSibling; // get next sibling element after h2, which can be h3 or ol
-      let hideFirstGroupingElement = true;
-      // iterate until next group element (h2), which is already selected by the querySelectorAll(-).forEach(-)
+  const allTags = Array.from(allTagsMap.entries()).sort((a, b) =>
+    a[1].localeCompare(b[1])
+  );
+
+  const updateYearGroups = () => {
+    document.querySelectorAll("h2.bibliography").forEach((yearHeading) => {
+      let iterator = yearHeading.nextElementSibling;
+      let hasVisibleEntries = false;
+
       while (iterator && iterator.tagName !== "H2") {
         if (iterator.tagName === "OL") {
-          const ol = iterator;
-          const unloadedSiblings = ol.querySelectorAll(":scope > li.unloaded");
-          const totalSiblings = ol.querySelectorAll(":scope > li");
-
-          if (unloadedSiblings.length === totalSiblings.length) {
-            ol.previousElementSibling.classList.add("unloaded"); // Add the '.unloaded' class to the previous grouping element (e.g. year)
-            ol.classList.add("unloaded"); // Add the '.unloaded' class to the OL itself
-          } else {
-            hideFirstGroupingElement = false; // there is at least some visible entry, don't hide the first grouping element
+          const hasVisibleInList = Array.from(iterator.querySelectorAll(":scope > li")).some(
+            (item) => !item.classList.contains("unloaded")
+          );
+          iterator.classList.toggle("unloaded", !hasVisibleInList);
+          if (hasVisibleInList) {
+            hasVisibleEntries = true;
           }
         }
         iterator = iterator.nextElementSibling;
       }
-      // Add unloaded class to first grouping element (e.g. year) if no item left in this group
-      if (hideFirstGroupingElement) {
-        element.classList.add("unloaded");
-      }
+
+      yearHeading.classList.toggle("unloaded", !hasVisibleEntries);
     });
   };
 
-  const updateInputField = () => {
-    const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    document.getElementById("bibsearch").value = hashValue;
-    filterItems(hashValue);
+  const applyFilters = () => {
+    const searchTerm = normalize(searchInput.value);
+
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const listItem = getListItem(card);
+      const cardTags = getCardTags(card);
+      const matchesSearch = !searchTerm || getSearchText(card).includes(searchTerm);
+      const matchesTags = selectedTags.size === 0 || cardTags.some((tag) => selectedTags.has(tag));
+      const isVisible = matchesSearch && matchesTags;
+
+      listItem.classList.toggle("unloaded", !isVisible);
+      if (isVisible) {
+        visibleCount += 1;
+      }
+    });
+
+    updateYearGroups();
+
+    if (noResults) {
+      noResults.hidden = visibleCount !== 0;
+    }
+
+    if (clearButton) {
+      clearButton.hidden = !(searchTerm || selectedTags.size);
+    }
   };
 
-  // Sensitive search. Only start searching if there's been no input for 300 ms
-  let timeoutId;
-  document.getElementById("bibsearch").addEventListener("input", function () {
-    clearTimeout(timeoutId); // Clear the previous timeout
-    const searchTerm = this.value.toLowerCase();
-    timeoutId = setTimeout(filterItems(searchTerm), 300);
+  const toggleTag = (tag) => {
+    const normalizedTag = normalize(tag);
+    if (!normalizedTag) return;
+
+    if (selectedTags.has(normalizedTag)) {
+      selectedTags.delete(normalizedTag);
+    } else {
+      selectedTags.add(normalizedTag);
+    }
+
+    topFilterButtons.forEach((button, buttonTag) => {
+      const isActive = selectedTags.has(buttonTag);
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    document.querySelectorAll(`.pub-chip--inline[data-tag="${CSS.escape(normalizedTag)}"]`).forEach((chip) => {
+      chip.classList.toggle("is-active", selectedTags.has(normalizedTag));
+      chip.setAttribute("aria-pressed", String(selectedTags.has(normalizedTag)));
+    });
+
+    applyFilters();
+  };
+
+  allTags.forEach(([tagKey, tagLabel]) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "pub-chip pub-chip--filter";
+    button.textContent = tagLabel;
+    button.dataset.tag = tagKey;
+    button.setAttribute("aria-pressed", "false");
+    button.addEventListener("click", () => toggleTag(tagKey));
+    filtersContainer.appendChild(button);
+    topFilterButtons.set(tagKey, button);
   });
 
-  window.addEventListener("hashchange", updateInputField); // Update the filter when the hash changes
+  document.addEventListener("click", (event) => {
+    const inlineTag = event.target.closest(".pub-chip--inline");
+    if (inlineTag) {
+      toggleTag(inlineTag.dataset.tag);
+      return;
+    }
 
-  updateInputField(); // Update filter when page loads
+    const toggleButton = event.target.closest(".pub-toggle");
+    if (!toggleButton) return;
+
+    const card = toggleButton.closest(".pub-card");
+    const panelName = toggleButton.dataset.panel;
+    const alreadyActive = toggleButton.classList.contains("is-active");
+
+    if (alreadyActive) {
+      closePanels(card);
+    } else {
+      openPanel(card, panelName);
+    }
+  });
+
+  let timeoutId;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(applyFilters, 150);
+  });
+
+  if (clearButton) {
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      selectedTags.clear();
+      topFilterButtons.forEach((button) => {
+        button.classList.remove("is-active");
+        button.setAttribute("aria-pressed", "false");
+      });
+      document.querySelectorAll(".pub-chip--inline").forEach((chip) => {
+        chip.classList.remove("is-active");
+        chip.setAttribute("aria-pressed", "false");
+      });
+      applyFilters();
+    });
+  }
+
+  cards.forEach((card) => closePanels(card));
+  applyFilters();
 });

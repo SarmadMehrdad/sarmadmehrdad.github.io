@@ -206,6 +206,59 @@ nav[data-toggle="toc"] {
   }
 }
 
+.toc-page {
+  position: relative;
+}
+
+.toc-page__content {
+  max-width: 100%;
+}
+
+/* Large desktop: Bootstrap container is 1140px wide */
+@media (min-width: 1200px) {
+  .toc-page__sidebar {
+    position: fixed;
+    top: 6rem;
+    width: 240px;
+    max-height: calc(100vh - 7rem);
+    overflow: auto;
+  }
+
+  .toc-page__sidebar--right {
+    left: calc(50% + 470px + 24px);
+  }
+
+  .toc-page__sidebar--left {
+    right: calc(50% + 470px + 24px);
+  }
+}
+
+/* Desktop/tablet: Bootstrap container is 960px wide */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .toc-page__sidebar {
+    position: fixed;
+    top: 6rem;
+    width: 210px;
+    max-height: calc(100vh - 7rem);
+    overflow: auto;
+  }
+
+  .toc-page__sidebar--right {
+    left: calc(50% + 480px + 20px);
+  }
+
+  .toc-page__sidebar--left {
+    right: calc(50% + 480px + 20px);
+  }
+}
+
+/* Smaller screens: stack or hide TOC */
+@media (max-width: 991.98px) {
+  .toc-page__sidebar {
+    display: none;
+  }
+}
+
 /* small screens */
 @media (max-width: 576px) {
   /* override stickyness so that the navigation does not follow scrolling */

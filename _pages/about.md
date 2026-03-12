@@ -1,34 +1,73 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+nav: false
+subtitle: Robotics researcher in inverse reinforcement learning, learning from demonstration, and embodied intelligence.
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: profile.jpg
+  image_circular: false
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi. I am **Sarmad Mehrdad**.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I recently completed my Ph.D. in Electrical Engineering at **New York University**. My work sits at the intersection of **robot learning, optimal control, and human motion understanding**. I care most about learning methods that are **data-efficient, interpretable, and grounded** in the behavior of real embodied systems.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<div class="about-cta-row">
+  <a class="btn btn-sm z-depth-1" href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a class="btn btn-sm z-depth-1" href="{{ '/research-statement/' | relative_url }}">Research Statement</a>
+  <a class="btn btn-sm z-depth-1" href="{{ '/cv/' | relative_url }}">CV</a>
+  <a class="btn btn-sm z-depth-1" href="{{ '/personal/' | relative_url }}">Personal</a>
+</div>
+
+<div class="summary-grid">
+  <div class="summary-card">
+    <p class="summary-card-title"><strong>What I work on</strong></p>
+    <p>My research revolves around three broad threads: learning human intent, learning from demonstration, and learning about humans from data.</p>
+  </div>
+  <div class="summary-card">
+    <p class="summary-card-title"><strong>What I care about</strong></p>
+    <p>I am drawn to problems that are mathematically grounded, relevant to real robots, and interpretable enough to explain why a behavior emerges.</p>
+  </div>
+  <div class="summary-card">
+    <p class="summary-card-title"><strong>Where I am headed</strong></p>
+    <p>Long term, I want to build an academic career in robotics and contribute to a style of robot learning that works with people in a thoughtful and human-centered way.</p>
+  </div>
+</div>
+
+## In a nutshell
+
+My research has centered on three broad threads:
+
+- **Learning human intent** through inverse reinforcement learning and cost-function inference.
+- **Learning from humans** through demonstration-driven robot learning.
+- **Learning about humans** by modeling human state, motion, and behavior from data.
+
+## What I am trying to build toward
+
+Going forward, I want to keep building in the broad space of **robot learning for human-centered robotics**. What excites me most is the point where learning, control, and embodiment meet.
+
+I like research that does not only optimize performance, but also helps us understand what the model is doing, what assumptions it is making, and what part of the behavior is genuinely meaningful.
+
+## A more human note
+
+I want this website to feel like it was written by a real person. So while this page is here to present my work, it is also here to show a bit of the person behind it: what I value, what kind of questions pull me in, and the direction I hope my research life grows into.
+
+If you would like the more formal version, the **CV** and **Research Statement** tabs are better fits.
+
+If you would like the more personal version, the **Personal** tab is where the site loosens up a little.
