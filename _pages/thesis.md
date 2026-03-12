@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 page_pdf: /files/thesis.pdf
 toc:
-  sidebar: right
+  sidebar: left
 ---
 
 You can download the full dissertation PDF using the button above.
