@@ -31,7 +31,7 @@ I finished that chapter in 2019 and started my Ph.D. at NYU in 2020. Somewhere a
 
 I eventually landed in Ludovic's lab and moved deeper into the research direction that feels most like me. During these years, I learned a lot, and not only academically.
 
-- I learned how to conduct research and think critically. Work in progress. Can still be better.
+- I learned how to conduct research and think critically. Work in progress.
 - I learned how to teach and communicate with a very wide range of students, from K-12 to graduate school.
 - I learned how to advise students, delegate work, resolve conflict, and be skeptical enough to question my own assumptions.
 - I learned how to brainstorm, collaborate, and respect ideas other than mine.

@@ -145,11 +145,13 @@ cv:
     #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     
-
     # Interests:
-    #   - name: Physics
-    #     icon: fa-solid fa-tag
-    #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    #   - name: Inverse Reinforcement Learning
+    #     keywords: ""
+    #   - name: Learning from Demonstration
+    #     keywords: ""
+    #   - name: Human-Robot Interaction
+    #     keywords: ""
 
     # Certificates:
     #   - name: Machine Learning
@@ -176,26 +178,26 @@ cv:
     #     start_date: 2018-01-01
     #     end_date: 2018-01-01
 
-    Awards:
-      - title: Ernst Weber Fellowship
-        date: 2022-01-01
-        awarder: NYU - Tandon School of Engineering
+    # Awards:
+    #   - title: Ernst Weber Fellowship
+    #     date: 2022-01-01
+    #     awarder: NYU - Tandon School of Engineering
 
-      - title: Tandon School of Engineering Fellowship
-        date: 2021-06-01
-        awarder: NYU - Tandon School of Engineering
+    #   - title: Tandon School of Engineering Fellowship
+    #     date: 2021-06-01
+    #     awarder: NYU - Tandon School of Engineering
 
-      - title: K-12 STEM Education Fellowship
-        date: 2021-01-01
-        awarder: NYU - Tandon School of Engineering
+    #   - title: K-12 STEM Education Fellowship
+    #     date: 2021-01-01
+    #     awarder: NYU - Tandon School of Engineering
       
-      - title: Tandon School of Engineering Fellowship
-        date: 2020-06-01
-        awarder: NYU - Tandon School of Engineering
+    #   - title: Tandon School of Engineering Fellowship
+    #     date: 2020-06-01
+    #     awarder: NYU - Tandon School of Engineering
 
-      - title: K-12 STEM Education Fellowship
-        date: 2020-06-01
-        awarder: NYU - Tandon School of Engineering
+    #   - title: K-12 STEM Education Fellowship
+    #     date: 2020-06-01
+    #     awarder: NYU - Tandon School of Engineering
 
     
 
