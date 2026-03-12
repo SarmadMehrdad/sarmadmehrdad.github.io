@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-thesis",
+          title: "Thesis",
+          description: "Dissertation overview and downloadable PDF.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/thesis/";
+          },
         },{id: "nav-personal",
           title: "Personal",
           description: "This page is the less formal side of the website. It is where I let the site breathe a little.",
