@@ -21,6 +21,7 @@ Overall, a single subject- and posture-agnostic time-varying cost function is sh
   year      = {2026},
   bibtex_show = {true},
   url       = {https://arxiv.org/pdf/2603.07797},
+  pubtype = {Preprint},
   preview   = {}    
 
 }
@@ -34,6 +35,7 @@ Overall, a single subject- and posture-agnostic time-varying cost function is sh
   pitch={We used MO-IRL on human-subject data for reaching tasks initiated from various postures to see how the assumed cost features would factor into a human’s motion for reaching — basically, what a human is trying to optimize. Another important avenue we pursued was using multiple weight sections throughout the course of human-generated trajectories instead of constant weights (as in MPC, for example). <br>**Spoiler Alert:** Joint acceleration is the most important feature for a human to modulate in a reaching task.},
   abstract={This paper investigates the application of Minimal Observation Inverse Reinforcement Learning (MO-IRL) to model and predict human arm-reaching movements with time-varying cost weights. Using a planar two-link biomechanical model and high-resolution motion-capture data from subjects performing a pointing task, we segment each trajectory into multiple phases and learn phase-specific combinations of seven candidate cost functions. MO-IRL iteratively refines cost weights by scaling observed and generated trajectories in the maximum entropy IRL formulation, greatly reducing the number of required demonstrations and convergence time compared to classical IRL approaches. Training on ten trials per posture yields average joint-angle Root Mean Squared Errors (RMSE) of 6.4 deg and 5.6 deg for six- and eight-segment weight divisions, respectively, versus 10.4 deg using a single static weight. Cross-validation on remaining trials and, for the first time, inter-subject validation on an unseen subject's 20 trials, demonstrates comparable predictive accuracy, around 8 deg RMSE, indicating robust generalization. Learned weights emphasize joint acceleration minimization during movement onset and termination, aligning with smoothness principles observed in biological motion. These results suggest that MO-IRL can efficiently uncover dynamic, subject-independent cost structures underlying human motor control, with potential applications for humanoid robots.},
   url={https://arxiv.org/pdf/2510.00329},
+  pubtype = {Preprint},
   bibtex_show={true},
   preview={}
 }
@@ -50,6 +52,7 @@ Overall, a single subject- and posture-agnostic time-varying cost function is sh
   pitch={We used MO-IRL to identify the underlying cost function for a human box-lifting task. The data was collected from six healthy male adults. We found that MO-IRL outperformed previously proposed methods in estimating the optimal cost function. We also used multi-section weights, as it appears that human subjects tend to favor different features throughout the execution of a task. <br>**Spoiler Alert**: Humans love to tune their joint acceleration depending on where they are in the task!!},
   abstract={Heavy-load manual lifting poses a significant risk of injury, motivating the need for personalized robotic assistance. The Minimal Observations Inverse Reinforcement Learning (MO-IRL) algorithm has recently demonstrated strong capabilities in recovering underlying optimality principles from very few demonstrations of simulated robotic motions, and at a very reasonable computational cost. Building on this, the present study integrates ten biomechanically informed cost functions into a direct optimal control formulation to predict human motion during heavy-load manual box-lifting tasks. Contrary to previous literature, thanks to the computational efficiency of MO-IRL, we allow time-varying optimal weights and include a collision-avoidance constraint within the set of cost functions. This constraint represents the subject's apprehension of hitting the target table, As MO-IRL requires careful tuning of multiple hyperparameters, we employ a grid search to identify the optimal set. With this configuration, the predicted motion achieves an average accuracy of 11.5 ± 6.2deg across all joint angles, outperforming comparable methods. The inferred cost weights reveal a time-varying control strategy: initially minimizing lower-limb torques, then smoothing the motion through reduced joint accelerations and load velocity, and finally adjusting to avoid table collision. These findings show that biomechanically guided MO-IRL, coupled with direct optimal control, can accurately recover complex, constrained lifting motions while providing interpretable insights into human motor objectives, paving the way for adaptive and userspecific robotic assistance.},
   url={https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11203152},
+  pubtype = {Conference},
   preview={}
 }
 
@@ -65,6 +68,7 @@ Overall, a single subject- and posture-agnostic time-varying cost function is sh
   pitch   = {In this study, we took MaxEnt IRL and made it iterative. Similar to optimal control, where a step direction and size are computed and taken at each iteration until convergence, we update the cost function weights in the same fashion. The plot twist is that we compute the step direction for the weights using MaxEnt IRL and determine the step size through a step-acceptance scheme (similar to a filter line search).},
   abstract = {We present an iterative inverse reinforcement learning algorithm to infer optimal cost functions in continuous spaces. Based on a popular maximum entropy criteria, our approach iteratively finds a weight improvement step and proposes a method to find an appropriate step size that ensures learned cost function features remain similar to the demonstrated trajectory features. In contrast to similar approaches, our algorithm can individually tune the effectiveness of each observation for the partition function and does not need a large sample set, enabling faster learning. We generate sample trajectories by solving an optimal control problem instead of random sampling, leading to more informative trajectories. The performance of our method is compared to two state of the art algorithms to demonstrate its benefits in several simulated environments.},
   url = {https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11247476},
+  pubtype = {Conference},
   preview = {}
 }
 
@@ -88,6 +92,7 @@ The demonstrated trends in cortical activation show potential for such EEG bioma
 tracking patient engagement during VR-based physical therapy or rehabilitation. The study also suggested more cortical activity
 through the use of VR at higher intensities.},
   url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10781577},
+  pubtype = {Conference},
   preview={}
 }
 
@@ -108,6 +113,7 @@ high- and low-frequency hysteresis behavior by 21.5% while also enhancing dynami
 frequencies and peak-to-peak pressures. Consequently, the paper evaluates the effectiveness of ”mechanically programming” stress
 distribution and distributed energy storage within soft robots to maximize their dynamic performance, offering direct benefits for control.},
   url={https://arxiv.org/pdf/2308.04722},
+  pubtype = {Preprint},
   preview={}
 }
 
@@ -122,6 +128,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={BioSignal Analysis},
   abstract={Functional muscle network analysis has attracted a great deal of interest in recent years, promising high sensitivity to changes of intermuscular synchronicity, studied mostly for healthy subjects and recently for patients living with neurological conditions (e.g., those caused by stroke). Despite the promising results, the between- and within-session reliability of the functional muscle network measures are yet to be established. Here, for the first time, we question and evaluate the test-retest reliability of non-parametric lower-limb functional muscle networks for controlled and lightly-controlled tasks, i.e., sit-to-stand, and over-the-ground walking, respectively, in healthy subjects. Fifteen subjects (eight females) were included over two sessions on two different days. The muscle activity was recorded using 14 surface electromyography (sEMG) sensors. The intraclass correlation coefficient (ICC) of the within-session and between-session trials was quantified for the various network metrics, including degree and weighted clustering coefficient. In order to compare with common classical sEMG measures, the reliabilities of the root mean square (RMS) of sEMG and the median frequency (MDF) of sEMG were also calculated. The ICC analysis revealed superior between-session reliability for muscle networks, with statistically significant differences when compared to classic measures. This paper proposed that the topographical metrics generated from functional muscle network can be reliably used for multi-session observations securing high reliability for quantifying the distribution of synergistic intermuscular synchronicities of both controlled and lightly controlled lower limb tasks. In addition, the low number of sessions required by the topographical network metrics to reach reliable measurements indicates the potential as biomarkers during rehabilitation.},
   url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10172091},
+  pubtype = {Journal},
   preview={}
 }
 
@@ -139,7 +146,8 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={Learning Human Signals},
   pitch={In this study, we propose two deep learning (DL) architectures that use only three human time-series biomarkers (HR, SpO₂, and temperature), along with patient characteristics (gender, BMI, etc.), to assess whether a COVID-positive patient will experience health deterioration (ICU admission, intubation, or death) over 3–24-hour prediction horizons. Our proposed architectures—based on recurrent neural networks (LSTM-based) and convolutional neural networks (temporal convolution)—achieve higher accuracy and sensitivity in deterioration prognosis compared to baseline methods that rely on a larger number of more complex human-data modalities for similar classification tasks. In addition, our occlusion analysis corroborates findings reported by the medical community during the COVID-19 pandemic, identifying which demographic groups are most affected by the disease and which physiological signals are most critical for this analysis.},
   abstract={Unrecognized deterioration of COVID-19 patients can lead to high morbidity and mortality. Most existing deterioration prediction models require a large number of clinical information, typically collected in hospital settings, such as medical images or comprehensive laboratory tests. This is infeasible for telehealth solutions and highlights a gap in deterioration prediction models based on minimal data, which can be recorded at a large scale in any clinic, nursing home, or even at the patient’s home. In this study, we develop and compare two prognostic models that predict if a patient will experience deterioration in the forthcoming 3 to 24 h. The models sequentially process routine triadic vital signs: (a) oxygen saturation, (b) heart rate, and (c) temperature. These models are also provided with basic patient information, including sex, age, vaccination status, vaccination date, and status of obesity, hypertension, or diabetes. The difference between the two models is the way that the temporal dynamics of the vital signs are processed. Model #1 utilizes a temporally-dilated version of the Long-Short Term Memory model (LSTM) for temporal processes, and Model #2 utilizes a residual temporal convolutional network (TCN) for this purpose. We train and evaluate the models using data collected from 37,006 COVID-19 patients at NYU Langone Health in New York, USA. The convolution-based model outperforms the LSTM based model, achieving a high AUROC of 0.8844–0.9336 for 3 to 24 h deterioration prediction on a held-out test set. We also conduct occlusion experiments to evaluate the importance of each input feature, which reveals the significance of continuously monitoring the variation of the vital signs. Our results show the prospect for accurate deterioration forecast using a minimum feature set that can be relatively easily obtained using wearable devices and self-reported patient information.},
-  url={https://www.nature.com/articles/s41598-023-37013-3},
+  html={https://www.nature.com/articles/s41598-023-37013-3},
+  pubtype = {Journal},
   preview={}
 }
 
@@ -153,6 +161,7 @@ distribution and distributed energy storage within soft robots to maximize their
   pitch={In this work, we address an inherent anticlimactic issue that can arise during the process of fitting a skew-*t* mixture model to a dataset. The motivation for using higher-complexity kernels in mixture models—such as skew-normal or skew-*t* distributions instead of Gaussian kernels—is to enable the resulting probabilistic model to better conform to the underlying data distribution. We observe that during fitting with the Expectation–Maximization (EM) algorithm, one of the skew-t components can gradually degenerate into a skew-normal distribution, which is less flexible than the skew-*t*. To mitigate this phenomenon, we propose a regularized EM-type algorithm, and the resulting mixture model achieves a higher log-likelihood, as expected.},
   abstract={Recently skew-t mixture models have been introduced as a flexible probabilistic modeling technique taking into account both skewness in data clusters and the statistical degree of freedom (S-DoF) to improve modeling generalizability, and robustness to heavy tails and skewness. In this paper, we show that the state-of-the-art skew-t mixture models fundamentally suffer from a hidden phenomenon named here as "S-DoF explosion," which results in local minima in the shapes of normal kernels during the non-convex iterative process of expectation maximization. For the first time, this paper provides insights into the instability of the S-DoF, which can result in the divergence of the kernels from the mixture of t-distribution, losing generalizability and power for modeling the outliers. Thus, in this paper, we propose a regularized iterative optimization process to train the mixture model, enhancing the generalizability and resiliency of the technique. The resulting mixture model is named Finite Mixture of Multivariate Regulated Skew-t (FiMReSt) Kernels, which stabilizes the S-DoF profile during optimization process of learning. To validate the performance, we have conducted a comprehensive experiment on several real-world datasets and a synthetic dataset. The results highlight (a) superior performance of the FiMReSt, (b) generalizability in the presence of outliers, and (c) convergence of S-DoF.},
   url={https://arxiv.org/pdf/2305.09071},
+  pubtype = {Preprint},
   preview={}
 }
 
@@ -167,6 +176,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={BioSignal Analysis},
   abstract={This paper, for the first time, compares the behaviors of nonlinear versus linear muscle networks in decoding hidden peripheral synergistic neural patterns during dynamic functional tasks. In this paper, we report a case study during which one healthy subject conducts a series of four lower limb repetitive tasks. Specifically, the paper focuses on tasks that involve the right knee joint, including walking, sit-to-stand, stepping, and drop-jump. Twelve muscles were recorded using the Delsys Trigno system. The linear muscle network was generated using coherence analysis, and the nonlinear network was generated using Spearman's correlation. The results show that the degree, clustering coefficient, and global efficiency of the muscle network have the highest value among tasks in the linear domain for the walking task, while a low linear synergistic network behavior for the sit-to-stand is observed. On the other hand, the results show that the nonlinear functional muscle network decodes high connectivity (degree) and clustering coefficient and efficiency for the sit-to-stand when compared with other tasks. We have also developed a two-dimensional functional connectivity plane composed of linear and nonlinear features and shown that it can span the lower-limb dynamic task space. The results of this paper for the first time highlight the importance of observing both linear and nonlinear connectivity patterns, especially for complex dynamic tasks. It should also be noted that through a simultaneous EEG recording (using Brain Vision System), we have shown that, indeed, cortical activity may indirectly explain highly-connected nonlinear muscle network for the sit-to-stand task, highlighting the importance of nonlinear muscle network as a neurophysiological window of observation beyond the periphery.},
   url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10123899},
+  pubtype = {Conference},
   preview={}
 }
 
@@ -181,6 +191,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={BioSignal Analysis},
   abstract={Patients with both phonotraumatic and non-phonotraumatic dysphonia commonly present with vocal hyperfunction, defined as excessive perilaryngeal muscle activity and characterized by muscular pain and strain in the neck, increased vocal effort, and vocal fatigue. The inability to reliably measure vocal hyperfunction is a barrier to adequate evaluation and treatment of hyperfunctional voice disorders. We have recently demonstrated that the perilaryngeal functional muscle network can be a novel sensitive neurophysiological window to vocal performance in vocally healthy subjects. In this paper, for the first time, we evaluate the performance and symmetry of functional perilaryngeal muscle networks in three patients with voice disorders. Surface electromyography signals were recorded from twelve sensors (six on each side of the neck) using the wireless Trigno sEMG system (Delsys Inc., Natick, MA). Patient 1 was diagnosed with primary muscle tension dysphonia, Patient 2 was diagnosed with unilateral vocal fold paresis, and Patient 3 was diagnosed with age-related glottal insufficiency. This paper reports altered functional connectivity and asymmetric muscle network scan behavior in all three patients when compared with a cohort of eight healthy subjects. Our approach quantifies synergistic network activity to interrogate coordination of perilaryngeal and surrounding muscles during voicing and potential discoordination of the muscle network for dysphonic conditions. Asymmetry in muscle networks is proposed here as a biomarker for monitoring vocal hyperfunction.},
   url={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10123733},
+  pubtype = {Conference},
   preview={}
 }
 
@@ -198,6 +209,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={BioSignal Analysis},
   abstract={Characterization of fatigue using surface electromyography (sEMG) data has been motivated for rehabilitation and injury-preventative technologies. Current sEMG-based models of fatigue are limited due to (a) linear and parametric assumptions, (b) lack of a holistic neurophysiological view, and (c) complex and heterogeneous responses. This paper proposes and validates a data-driven non-parametric functional muscle network analysis to reliably characterize fatigue-related changes in synergistic muscle coordination and distribution of neural drive at the peripheral level. The proposed approach was tested on data collected in this study from the lower extremities of 26 asymptomatic volunteers (13 subjects were assigned to the fatigue intervention group, and 13 age/gender-matched subjects were assigned to the control group). Volitional fatigue was induced in the intervention group by moderate-intensity unilateral leg press exercises. The proposed non-parametric functional muscle network demonstrated a consistent decrease in connectivity after the fatigue intervention, as indicated by network degree, weighted clustering coefficient (WCC), and global efficiency. The graph metrics displayed consistent and significant decreases at the group level, individual subject level, and individual muscle level. For the first time, this paper proposed a non-parametric functional muscle network and highlighted the corresponding potential as a sensitive biomarker of fatigue with superior performance to conventional spectrotemporal measures.},
   url={https://ieeexplore.ieee.org/iel7/6221020/6363502/10023477.pdf},
+  pubtype = {Journal},
   preview={}
 }
 
@@ -215,7 +227,34 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={BioSignal Analysis},
   abstract={Objective evaluation of physiological responses using non-invasive methods for the assessment of vocal performance and voice disorders has attracted great interest. This paper, for the first time, aims to implement and evaluate perilaryngeal-cranial functional muscle networks. The study investigates the variations in topographical characteristics of the network and the corresponding ability to differentiate vocal tasks. },
   url={https://ieeexplore.ieee.org/iel7/10/4359967/09779450.pdf},
+  pubtype = {Journal},
   preview={}
+}
+
+@misc{mehrdad2024smartwearable_us,
+  title        = {Smart Wearable IOT Device for Health Tracking, Contact Tracing and Prediction of Health Deterioration},
+  author       = {Seyed Farokh Atashzar, Yao Wang, Daniel Sterman, Sarmad Mehrdad},
+  year         = {2024},
+  month        = mar,
+  note         = {US patent application US20240081657A1, application no. US18/508,879. Assignee: New York University.},
+  url      = {https://patentimages.storage.googleapis.com/fc/9d/a1/e44771d5e9d6ea/US20240081657A1.pdf},
+  pubtype = {Patent},
+  tags         = {Wearable Devices},
+  status       = {Patent Application},
+  abstract        = {The present invention provides a smart wearable IOT device configured to be worn by a subject on the body and is capable of continuously tracking and reporting a plurality of vital signs and physical activities of the user, including but not limited to sound and vibrational dynamics due to breathing and coughing (from which we can derive the breathing and coughing types and features), body temperature, peripheral oxygen saturation (SpO2), heart rate, and fatigue-related mobility, physical ability, step count, photopl ethy smogram (PPG), ECG, heart rate, heart rate variability, etc. In one aspect, the wearable system will be able to measure the distance with different users through the transmit and receive of Bluetooth low energy signals or WiFi to trace contacts between different wearers. The system will be able to record the data locally on a SD card and also will be able to upload on a server.}
+}
+
+@misc{mehrdad2022smartwearable_wo,
+  title        = {Smart Wearable IOT Device for Health Tracking, Contact Tracing and Prediction of Health Deterioration},
+  author       = {Seyed Farokh Atashzar, Yao Wang, Daniel Sterman, Sarmad Mehrdad},
+  year         = {2022},
+  month        = nov,
+  note         = {PCT publication WO2022241311A1, application no. PCT/US2022/029440. Assignee: New York University.},
+  url      = {https://patentimages.storage.googleapis.com/be/78/fa/0c6dbab0ef031f/WO2022241311A1.pdf},
+  pubtype = {Patent},
+  tags         = {Wearable Devices},
+  status       = {Patent Application},
+  abstract        = {The present invention provides a smart wearable IOT device configured to be worn by a subject on the body and is capable of continuously tracking and reporting a plurality of vital signs and physical activities of the user, including but not limited to sound and vibrational dynamics due to breathing and coughing (from which we can derive the breathing and coughing types and features), body temperature, peripheral oxygen saturation (SpO2), heart rate, and fatigue-related mobility, physical ability, step count, photoplethysmogram (PPG), ECG, heart rate, heart rate variability, etc. In one aspect, the wearable system will be able to measure the distance with different users through the transmit and receive of Bluetooth low energy signals or WiFi to trace contacts between different wearers. The system will be able to record the data locally on a SD card and also will be able to upload on a server.}
 }
 
 
@@ -230,6 +269,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={BioSignal Analysis},
   abstract={Objective evaluation of physiological responses using non-invasive methods has attracted great interest regarding the assessment of vocal performance and disorders. This paper, for the first time, demonstrates that the topographical features of the cervical-cranial intermuscular coherence network generated using surface electromyography (sEMG) have a strong potential for detecting subtle changes in vocal performance. For this purpose, in this paper, 12 sEMG signals were collected from six cervical and cranial muscles bilaterally. Data were collected from four subjects without a history of a voice disorder performing a series of vocal tasks. The vocal tasks were varied phonation (an /a/ sustained for the maximal duration with combinations of two levels of loudness and two levels of pitch), a pitch glide from low to high, singing a familiar song, spontaneous speech, and reading with different loudness levels. The varied phonation tasks showed the median degree, and weighted clustering coefficient of the coherence-based intermuscular network ascends monotonically, with a high effect size (|rrb| = 0.52). The set of tasks, including pitch glide, singing, and speech, was significantly distinguishable using the network features as both degree and weighted clustering coefficient had a very high effect size (|rrb| > 0.83) across these tasks. Also, pitch glide has the highest degree and weighted clustering coefficient among all tasks (degree > 0.6, weighted clustering coefficient > 0.6). Spectrotemporal features performed far less effective than the proposed functional muscle network metrics to differentiate the vocal tasks. The highest effect size for spectrotemporal features was only |rrb| = 0.19. In this paper, for the first time, the power of a cervical-cranial muscle network has been demonstrated as a neurophysiological window to vocal performance. The results also shed light on the tasks with the highest network involvement, which may be potentially used in monitoring vocal disorders and tracking rehabilitation progress.},
   url={https://www.biorxiv.org/content/10.1101/2021.09.23.461177.full.pdf},
+  pubtype = {Preprint},
   preview={}
 }
 
@@ -246,6 +286,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={Soft Robotics},
   abstract={Soft robots have shown great potential for manufacturing exoskeletons, prostheses, and surgical robots. In this paper, we propose the concept of programmable soft robotics and will experimentally evaluate the performance in the context of continuum mechanisms. The proposed novel concept is motivated by the mechanical shape of RNA molecules which has a single-stranded polymeric molecule with a sugar-phosphate backbone and nitrogenous bases. The shape of the RNA and the type, location, and characteristics of the bases define the coded information. Due to the complexity of RNA, the proposed robot cannot be considered a “bio-inspired” design. Instead, we indirectly utilize the concept of encoding sequences and introduce a new family of soft continuum robots based on a novel design of 3D printable “mechanical library” and “embedded functions” to be implemented on the backbone structure for mechanical programming. Through structural coding of the bases, the paper proposed a wide range of continuum robots. The system has the potential to be scaled up for multiple degrees of freedom (DOF), while the dexterity and range can be structurally programmed. A set of three soft continuum systems are designed, simulated, manufactured. The performance is evaluated by comparing simulations and experiments. We observed that actuators have different hysteresis ranging from 7.50% to 38.36% (on average) with a standard deviation ranging from 5.56% to 40.72%. The results highlight the effect of inherent pneumatic delay causing the hysteresis loops, which should be considered for control.},
   url={https://ieeexplore.ieee.org/iel7/7083369/7339444/09507087.pdf},
+  pubtype = {Journal},
   preview={}
 }
 
@@ -261,6 +302,7 @@ distribution and distributed energy storage within soft robots to maximize their
   tags={Wearable Devices, Learning Human Signals},
   abstract={The COVID-19 pandemic has highly impacted the communities globally by reprioritizing the means through which various societal sectors operate. Among these sectors, healthcare providers and medical workers have been impacted prominently due to the massive increase in demand for medical services under unprecedented circumstances. Hence, any tool that can help the compliance with social guidelines for COVID-19 spread prevention will have a positive impact on managing and controlling the virus outbreak and reducing the excessive burden on the healthcare system. This perspective article disseminates the perspectives of the authors regarding the use of novel biosensors and intelligent algorithms embodied in wearable IoMT frameworks for tackling this issue. We discuss how with the use of smart IoMT wearables certain biomarkers can be tracked for detection of COVID-19 in exposed individuals. We enumerate several machine learning algorithms which can be used to process a wide range of collected biomarkers for detecting (a) multiple symptoms of SARS-CoV-2 infection and (b) the dynamical likelihood of contracting the virus through interpersonal interaction. Eventually, we enunciate how a systematic use of smart wearable IoMT devices in various social sectors can intelligently help controlling the spread of COVID-19 in communities as they enter the reopening phase. We explain how this framework can benefit individuals and their medical correspondents by introducing Systems for Symptom Decoding (SSD), and how the use of this technology can be generalized on a societal level for the control of spread by introducing Systems for Spread Tracing (SST).},
   url={https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.610653/pdf},
+  pubtype = {Journal},
   preview={}
 }
 
@@ -276,7 +318,8 @@ distribution and distributed energy storage within soft robots to maximize their
   bibtex_show={true},
   tags={Review},
   abstract={The advent of telerobotic systems has revolutionized various aspects of the industry and human life. This technology is designed to augment human sensorimotor capabilities to extend them beyond natural competence. Classic examples are space and underwater applications when distance and access are the two major physical barriers to be combated with this technology. In modern examples, telerobotic systems have been used in several clinical applications, including teleoperated surgery and telerehabilitation. In this regard, there has been a significant amount of research and development due to the major benefits in terms of medical outcomes. Recently telerobotic systems are combined with advanced artificial intelligence modules to better share the agency with the operator and open new doors of medical automation. In this review paper, we have provided a comprehensive analysis of the literature considering various topologies of telerobotic systems in the medical domain while shedding light on different levels of autonomy for this technology, starting from direct control, going up to command-tracking autonomous telerobots. Existing challenges, including instrumentation, transparency, autonomy, stochastic communication delays, and stability, in addition to the current direction of research related to benefit in telemedicine and medical automation, and future vision of this technology, are discussed in this review paper.},
-  url={https://www.mdpi.com/2076-3417/11/1/209},
+  html={https://www.mdpi.com/2076-3417/11/1/209},
+  pubtype = {Journal},
   preview={}
 }
 

@@ -56,8 +56,16 @@
   border-radius: 999px;
   border: 1px solid var(--global-divider-color);
   background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  -webkit-text-fill-color: var(--global-text-color);
+  caret-color: var(--global-theme-color);
   padding: 0.85rem 1rem;
   font-size: 0.98rem;
+}
+
+.pub-toolbar__search .bibsearch-form-input::placeholder {
+  color: var(--global-text-color-light);
+  opacity: 0.9;
 }
 
 .pub-toolbar__filter-header {

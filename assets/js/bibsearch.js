@@ -4,6 +4,10 @@ const getEntryCards = () => Array.from(document.querySelectorAll(".bibliography 
 
 const getListItem = (card) => card.closest("li");
 
+const getCardPubType = (card) => normalize(card.dataset.pubtype || "");
+
+const getCardPubTypeDisplay = (card) => (card.dataset.pubtypeDisplay || "").trim();
+
 const getCardTags = (card) => {
   const raw = card.dataset.tags || "";
   return raw
@@ -63,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filtersContainer = document.getElementById("pub-tag-filters");
   const clearButton = document.getElementById("pub-clear-filters");
   const noResults = document.getElementById("pub-no-results");
+  const typeFiltersContainer = document.getElementById("pub-type-filters");
 
   if (!searchInput || !filtersContainer) {
     return;
@@ -72,7 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectedTags = new Set();
   const topFilterButtons = new Map();
 
+  const selectedTypes = new Set();
+  const typeFilterButtons = new Map();
+
   const allTagsMap = new Map();
+  const allTypesMap = new Map();
 
   cards.forEach((card) => {
     const normalizedTags = getCardTags(card);
@@ -83,9 +92,20 @@ document.addEventListener("DOMContentLoaded", () => {
         allTagsMap.set(tag, displayTags[index] || tag);
       }
     });
+
+    const typeKey = getCardPubType(card);
+    const typeLabel = getCardPubTypeDisplay(card);
+
+    if (typeKey && !allTypesMap.has(typeKey)) {
+      allTypesMap.set(typeKey, typeLabel || typeKey);
+    }
   });
 
   const allTags = Array.from(allTagsMap.entries()).sort((a, b) =>
+    a[1].localeCompare(b[1])
+  );
+
+  const allTypes = Array.from(allTypesMap.entries()).sort((a, b) =>
     a[1].localeCompare(b[1])
   );
 
@@ -119,9 +139,13 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach((card) => {
       const listItem = getListItem(card);
       const cardTags = getCardTags(card);
+      const cardType = getCardPubType(card);
+
       const matchesSearch = !searchTerm || getSearchText(card).includes(searchTerm);
       const matchesTags = selectedTags.size === 0 || cardTags.some((tag) => selectedTags.has(tag));
-      const isVisible = matchesSearch && matchesTags;
+      const matchesTypes = selectedTypes.size === 0 || selectedTypes.has(cardType);
+
+      const isVisible = matchesSearch && matchesTags && matchesTypes;
 
       listItem.classList.toggle("unloaded", !isVisible);
       if (isVisible) {
@@ -136,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (clearButton) {
-      clearButton.hidden = !(searchTerm || selectedTags.size);
+      clearButton.hidden = !(searchTerm || selectedTags.size || selectedTypes.size);
     }
   };
 
@@ -164,6 +188,25 @@ document.addEventListener("DOMContentLoaded", () => {
     applyFilters();
   };
 
+  const toggleType = (type) => {
+    const normalizedType = normalize(type);
+    if (!normalizedType) return;
+
+    if (selectedTypes.has(normalizedType)) {
+      selectedTypes.delete(normalizedType);
+    } else {
+      selectedTypes.add(normalizedType);
+    }
+
+    typeFilterButtons.forEach((button, buttonType) => {
+      const isActive = selectedTypes.has(buttonType);
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    applyFilters();
+  };
+
   allTags.forEach(([tagKey, tagLabel]) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -175,6 +218,20 @@ document.addEventListener("DOMContentLoaded", () => {
     filtersContainer.appendChild(button);
     topFilterButtons.set(tagKey, button);
   });
+
+  if (typeFiltersContainer) {
+    allTypes.forEach(([typeKey, typeLabel]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "pub-chip pub-chip--filter";
+      button.textContent = typeLabel;
+      button.dataset.type = typeKey;
+      button.setAttribute("aria-pressed", "false");
+      button.addEventListener("click", () => toggleType(typeKey));
+      typeFiltersContainer.appendChild(button);
+      typeFilterButtons.set(typeKey, button);
+    });
+  }
 
   document.addEventListener("click", (event) => {
     const inlineTag = event.target.closest(".pub-chip--inline");
@@ -208,6 +265,11 @@ document.addEventListener("DOMContentLoaded", () => {
       searchInput.value = "";
       selectedTags.clear();
       topFilterButtons.forEach((button) => {
+        button.classList.remove("is-active");
+        button.setAttribute("aria-pressed", "false");
+      });
+      selectedTypes.clear();
+      typeFilterButtons.forEach((button) => {
         button.classList.remove("is-active");
         button.setAttribute("aria-pressed", "false");
       });

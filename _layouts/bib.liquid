@@ -4,6 +4,7 @@
 {% assign tag_list = raw_tags | split: ',' %}
 {% assign normalized_tags = '' %}
 {% assign display_tags = '' %}
+{% assign pubtype_value = entry.pubtype | default: '' | strip %}
 
 {% for raw_tag in tag_list %}
   {% assign clean_tag = raw_tag | strip %}
@@ -74,7 +75,9 @@
   class="pub-card{% if preview_value == '' %} pub-card--no-media{% endif %}"
   data-tags="{{ normalized_tags }}"
   data-tags-display="{{ display_tags | escape }}"
-  data-search-extra="{{ raw_tags | downcase | escape }} {{ entry.status | downcase | escape }} {{ entry.pitch | downcase | escape }} {{ entry.note | downcase | escape }}"
+  data-pubtype="{{ pubtype_value | downcase | escape }}"
+  data-pubtype-display="{{ pubtype_value | escape }}"
+  data-search-extra="{{ raw_tags | downcase | escape }} {{ entry.status | downcase | escape }} {{ entry.pitch | downcase | escape }} {{ entry.note | downcase | escape }} {{ pubtype_value | downcase | escape }}"
 >
   {% if preview_markup contains 'pub-card__image' %}
     <div class="pub-card__media">
@@ -176,6 +179,10 @@
             </span>
           {% endif %}
 
+          {% if pubtype_value != '' %}
+            <span class="pub-pill pub-pill--type">{{ pubtype_value }}</span>
+          {% endif %}
+
           {% if entry.status %}
             <span class="pub-pill pub-pill--status">{{ entry.status }}</span>
           {% endif %}
@@ -243,7 +250,7 @@
         <a href="{{ entry.html }}" class="pub-action" role="button">HTML</a>
       {% endif %}
       {% if entry.url %}
-        <a href="{{ entry.url }}" class="pub-action" role="button">Paper</a>
+        <a href="{{ entry.url }}" class="pub-action" role="button">PDF</a>
       {% endif %}
       {% if entry.blog %}
         <a href="{{ entry.blog }}" class="pub-action" role="button">Blog</a>

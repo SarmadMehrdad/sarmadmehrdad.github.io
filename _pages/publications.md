@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Search, filter, and browse my publications.
+description: Search, filter by topic and publication type, and browse my publications.
 nav: true
 nav_order: 2
 ---
@@ -11,7 +11,7 @@ nav_order: 2
 
 <div class="publications">
   <div id="pub-no-results" class="pub-no-results" hidden>
-    No publications matched the current search and topic filters.
+    No publications matched the current search, topic filters, or publication-type filters.
   </div>
 
   {% bibliography %}
