@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-13'
+  last_updated: '2026-03-25'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -14,7 +14,7 @@ papers:
     title: Measuring changes in cortical processes during vr-aided physical exercise-an eeg-based approach
     year: '2024'
   6r4_QewAAAAJ:5nxA0vEk-isC:
-    citations: 12
+    citations: 13
     title: 'Perilaryngeal-cranial functional muscle network differentiates vocal tasks: A multi-channel semg approach'
     year: '2022'
   6r4_QewAAAAJ:LkGwnXOMwfcC:
@@ -42,7 +42,7 @@ papers:
     title: Characterization of cervical-cranial muscle network in correlation with vocal features
     year: '2021'
   6r4_QewAAAAJ:WF5omc3nYNoC:
-    citations: 97
+    citations: 98
     title: 'Cyber-physical resilience of electrical power systems against malicious attacks: A review'
     year: '2018'
   6r4_QewAAAAJ:Wp0gIr-vW9MC:
@@ -70,7 +70,7 @@ papers:
     title: Non-parametric functional muscle network as a robust biomarker of fatigue
     year: '2023'
   6r4_QewAAAAJ:kNdYIx-mwKoC:
-    citations: 3
+    citations: 4
     title: 'Lower-limb non-parametric functional muscle network: Test-retest reliability analysis'
     year: '2023'
   6r4_QewAAAAJ:mVmsd5A6BfQC:
