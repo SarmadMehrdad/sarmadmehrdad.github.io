@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-25'
+  last_updated: '2026-04-10'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -34,7 +34,7 @@ papers:
     title: Design, fabrication, and validation of a new family of 3d-printable structurally-programmable actuators for soft robotics
     year: '2021'
   6r4_QewAAAAJ:ULOm3_A8WrAC:
-    citations: 13
+    citations: 14
     title: Deep learning for deterioration prediction of COVID-19 patients based on time-series of three vital signs
     year: '2023'
   6r4_QewAAAAJ:UebtZRa9Y70C:
@@ -82,7 +82,7 @@ papers:
     title: Cost function estimation using inverse reinforcement learning with minimal observations
     year: '2025'
   6r4_QewAAAAJ:roLk4NBRz8UC:
-    citations: 48
+    citations: 50
     title: "Perspective: wearable internet of medical things for remote tracking of symptoms, prediction of health anomalies, implementation of preventative measures, and control of virus \u2026"
     year: '2021'
   6r4_QewAAAAJ:ufrVoPGSRksC:
