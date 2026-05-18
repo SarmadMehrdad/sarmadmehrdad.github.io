@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-13'
+  last_updated: '2026-05-18'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -42,7 +42,7 @@ papers:
     title: Characterization of cervical-cranial muscle network in correlation with vocal features
     year: '2021'
   6r4_QewAAAAJ:WF5omc3nYNoC:
-    citations: 98
+    citations: 101
     title: 'Cyber-physical resilience of electrical power systems against malicious attacks: A review'
     year: '2018'
   6r4_QewAAAAJ:Wp0gIr-vW9MC:
@@ -62,7 +62,7 @@ papers:
     title: "Muscle activity and hypoalgesia in blood flow restricted versus unrestricted effort\u2010matched resistance exercise in healthy adults"
     year: '2024'
   6r4_QewAAAAJ:aqlVkmm33-oC:
-    citations: 2
+    citations: 3
     title: Minimal Observations Inverse Reinforcement Learning for Predicting Human Box-Lifting Motions
     year: '2025'
   6r4_QewAAAAJ:hqOjcs7Dif8C:
@@ -78,7 +78,7 @@ papers:
     title: Toward Global Intent Inference for Human Motion by Inverse Reinforcement Learning
     year: '2026'
   6r4_QewAAAAJ:qxL8FJ1GzNcC:
-    citations: 4
+    citations: 5
     title: Cost function estimation using inverse reinforcement learning with minimal observations
     year: '2025'
   6r4_QewAAAAJ:roLk4NBRz8UC:
