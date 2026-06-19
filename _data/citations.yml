@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-03'
+  last_updated: '2026-06-19'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -42,7 +42,7 @@ papers:
     title: Characterization of cervical-cranial muscle network in correlation with vocal features
     year: '2021'
   6r4_QewAAAAJ:WF5omc3nYNoC:
-    citations: 101
+    citations: 103
     title: 'Cyber-physical resilience of electrical power systems against malicious attacks: A review'
     year: '2018'
   6r4_QewAAAAJ:Wp0gIr-vW9MC:
@@ -82,7 +82,7 @@ papers:
     title: Cost function estimation using inverse reinforcement learning with minimal observations
     year: '2025'
   6r4_QewAAAAJ:roLk4NBRz8UC:
-    citations: 50
+    citations: 49
     title: "Perspective: wearable internet of medical things for remote tracking of symptoms, prediction of health anomalies, implementation of preventative measures, and control of virus \u2026"
     year: '2021'
   6r4_QewAAAAJ:ufrVoPGSRksC:
