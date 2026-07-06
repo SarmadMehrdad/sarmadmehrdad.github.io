@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-19'
+  last_updated: '2026-07-06'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -18,7 +18,7 @@ papers:
     title: 'Perilaryngeal-cranial functional muscle network differentiates vocal tasks: A multi-channel semg approach'
     year: '2022'
   6r4_QewAAAAJ:LkGwnXOMwfcC:
-    citations: 72
+    citations: 73
     title: Review of advanced medical telerobots
     year: '2020'
   6r4_QewAAAAJ:M3ejUd6NZC8C:
@@ -34,7 +34,7 @@ papers:
     title: Design, fabrication, and validation of a new family of 3d-printable structurally-programmable actuators for soft robotics
     year: '2021'
   6r4_QewAAAAJ:ULOm3_A8WrAC:
-    citations: 15
+    citations: 17
     title: Deep learning for deterioration prediction of COVID-19 patients based on time-series of three vital signs
     year: '2023'
   6r4_QewAAAAJ:UebtZRa9Y70C:
@@ -66,7 +66,7 @@ papers:
     title: Minimal Observations Inverse Reinforcement Learning for Predicting Human Box-Lifting Motions
     year: '2025'
   6r4_QewAAAAJ:hqOjcs7Dif8C:
-    citations: 15
+    citations: 16
     title: Non-parametric functional muscle network as a robust biomarker of fatigue
     year: '2023'
   6r4_QewAAAAJ:kNdYIx-mwKoC:
