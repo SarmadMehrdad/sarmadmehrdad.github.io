@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-22'
+  last_updated: '2026-07-27'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -18,9 +18,9 @@ papers:
     title: 'Perilaryngeal-cranial functional muscle network differentiates vocal tasks: A multi-channel semg approach'
     year: '2022'
   6r4_QewAAAAJ:LkGwnXOMwfcC:
-    citations: 76
+    citations: 75
     title: Review of advanced medical telerobots
-    year: '2020'
+    year: '2021'
   6r4_QewAAAAJ:M3ejUd6NZC8C:
     citations: 0
     title: 'Cross-disciplinary study of the neural basis of rehabilitation outcomes with virtual reality: a preliminary investigation'
@@ -50,7 +50,7 @@ papers:
     title: 'From Internal Response to External Intent: Data-Efficient Machine Learning for Human State, Motion, and Embodied Intelligence'
     year: '2026'
   6r4_QewAAAAJ:YOwf2qJgpHMC:
-    citations: 1
+    citations: 2
     title: How Does the Inner Geometry of Soft Actuators Modulate the Dynamic and Hysteretic Response?
     year: '2023'
   6r4_QewAAAAJ:Zph67rFs4hoC:
