@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-27'
+  last_updated: '2026-08-14'
 papers:
   6r4_QewAAAAJ:3fE2CSJIrl8C:
     citations: 2
@@ -14,13 +14,13 @@ papers:
     title: Measuring changes in cortical processes during vr-aided physical exercise-an eeg-based approach
     year: '2024'
   6r4_QewAAAAJ:5nxA0vEk-isC:
-    citations: 13
+    citations: 16
     title: 'Perilaryngeal-cranial functional muscle network differentiates vocal tasks: A multi-channel semg approach'
     year: '2022'
   6r4_QewAAAAJ:LkGwnXOMwfcC:
     citations: 75
     title: Review of advanced medical telerobots
-    year: '2021'
+    year: '2020'
   6r4_QewAAAAJ:M3ejUd6NZC8C:
     citations: 0
     title: 'Cross-disciplinary study of the neural basis of rehabilitation outcomes with virtual reality: a preliminary investigation'
@@ -34,7 +34,7 @@ papers:
     title: Design, fabrication, and validation of a new family of 3d-printable structurally-programmable actuators for soft robotics
     year: '2021'
   6r4_QewAAAAJ:ULOm3_A8WrAC:
-    citations: 17
+    citations: 18
     title: Deep learning for deterioration prediction of COVID-19 patients based on time-series of three vital signs
     year: '2023'
   6r4_QewAAAAJ:UebtZRa9Y70C:
@@ -42,7 +42,7 @@ papers:
     title: Characterization of cervical-cranial muscle network in correlation with vocal features
     year: '2021'
   6r4_QewAAAAJ:WF5omc3nYNoC:
-    citations: 104
+    citations: 107
     title: 'Cyber-physical resilience of electrical power systems against malicious attacks: A review'
     year: '2018'
   6r4_QewAAAAJ:Wp0gIr-vW9MC:
@@ -62,15 +62,15 @@ papers:
     title: "Muscle activity and hypoalgesia in blood flow restricted versus unrestricted effort\u2010matched resistance exercise in healthy adults"
     year: '2024'
   6r4_QewAAAAJ:aqlVkmm33-oC:
-    citations: 3
-    title: Minimal Observations Inverse Reinforcement Learning for Predicting Human Box-Lifting Motions
+    citations: 5
+    title: Minimal observations inverse reinforcement learning for predicting human box-lifting motions
     year: '2025'
   6r4_QewAAAAJ:hqOjcs7Dif8C:
-    citations: 16
+    citations: 17
     title: Non-parametric functional muscle network as a robust biomarker of fatigue
     year: '2023'
   6r4_QewAAAAJ:kNdYIx-mwKoC:
-    citations: 4
+    citations: 5
     title: 'Lower-limb non-parametric functional muscle network: Test-retest reliability analysis'
     year: '2023'
   6r4_QewAAAAJ:mVmsd5A6BfQC:
@@ -78,11 +78,11 @@ papers:
     title: Toward Global Intent Inference for Human Motion by Inverse Reinforcement Learning
     year: '2026'
   6r4_QewAAAAJ:qxL8FJ1GzNcC:
-    citations: 5
+    citations: 6
     title: Cost function estimation using inverse reinforcement learning with minimal observations
     year: '2025'
   6r4_QewAAAAJ:roLk4NBRz8UC:
-    citations: 49
+    citations: 48
     title: "Perspective: wearable internet of medical things for remote tracking of symptoms, prediction of health anomalies, implementation of preventative measures, and control of virus \u2026"
     year: '2021'
   6r4_QewAAAAJ:ufrVoPGSRksC:
